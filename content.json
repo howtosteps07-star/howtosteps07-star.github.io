@@ -1,0 +1,48 @@
+{
+    "services": [
+        {
+            "id": 1,
+            "title": "Invändig målning",
+            "desc": "Förvandla dina rum med perfekt finish. Vi målar väggar, tak och snickerier.",
+            "icon": "home"
+        },
+        {
+            "id": 2,
+            "title": "Utvändig målning",
+            "desc": "Skydda och försköna din fasad. Vi arbetar med alla typer av material och hus.",
+            "icon": "sun"
+        },
+        {
+            "id": 3,
+            "title": "Tapetsering",
+            "desc": "Precisionsarbete med mönsterpassning. Vi sätter alla sorters tapeter proffsigt.",
+            "icon": "layout"
+        },
+        {
+            "id": 4,
+            "title": "Renovering",
+            "desc": "Underhåll och reparationer som förlänger livslängden på ditt boende.",
+            "icon": "hammer"
+        }
+    ],
+    "reviews": [
+        {
+            "id": 1,
+            "text": "Mycket professionellt arbete, rekommenderas starkt!",
+            "author": "Kund",
+            "rating": 5
+        },
+        {
+            "id": 2,
+            "text": "Snabb service och fint resultat på vår utvändiga målning.",
+            "author": "Privatkund",
+            "rating": 5
+        },
+        {
+            "id": 3,
+            "text": "Noggranna och lätta att ha att göra med. Kommer anlita igen.",
+            "author": "Företagskund",
+            "rating": 5
+        }
+    ]
+}
