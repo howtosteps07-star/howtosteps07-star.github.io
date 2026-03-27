@@ -1,1 +1,0 @@
-# howtosteps07-star.github.io
