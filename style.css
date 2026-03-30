@@ -1,0 +1,32 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: #fbbf24;
+    color: #0f172a;
+}
+
+.nav-scrolled {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.1);
+}
+
+.lucide {
+    stroke-width: 2;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-open {
+        overflow: hidden;
+    }
+}
