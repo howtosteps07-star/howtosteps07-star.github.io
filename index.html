@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KraftMontage Sverige AB | Professionella elinstallationer</title>
+    <meta name="description" content="KraftMontage Sverige AB levererar säkra och moderna elinstallationer för privatpersoner och företag i Västerås.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            light: '#f8fafc',
+                            accent: '#facc15',
+                            black: '#020617'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans antialiased selection:bg-brand-accent selection:text-brand-dark">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-brand-dark/90 backdrop-blur-md border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="w-8 h-8 rounded-lg bg-brand-accent flex items-center justify-center">
+                        <i data-lucide="zap" class="w-5 h-5 text-brand-dark"></i>
+                    </div>
+                    <span class="font-bold text-xl text-white tracking-tight">KraftMontage</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#om-oss" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Om oss</a>
+                    <a href="#tjanster" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Tjänster</a>
+                    <a href="#recensioner" class="text-gray-300 hover:text-white transition-colors text-sm font-medium">Recensioner</a>
+                    <a href="#kontakt" class="bg-brand-accent hover:bg-yellow-300 text-brand-dark px-5 py-2 rounded-full text-sm font-semibold transition-all transform hover:scale-105">Kontakta oss</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-300 hover:text-white p-2">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-dark border-b border-white/10 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#om-oss" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg mobile-link">Om oss</a>
+                <a href="#tjanster" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg mobile-link">Tjänster</a>
+                <a href="#recensioner" class="block px-3 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-white/5 rounded-lg mobile-link">Recensioner</a>
+                <a href="#kontakt" class="block px-3 py-3 text-base font-medium text-brand-accent hover:text-yellow-300 mobile-link">Kontakta oss</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hem" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-brand-dark flex items-center min-h-[90vh]">
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brand-dark/90"></div>
+                <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-accent/10 rounded-full blur-3xl mix-blend-screen"></div>
+            </div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="max-w-3xl gs-reveal">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                        <span class="text-xs font-medium text-gray-300 tracking-wide uppercase">Säkra elinstallationer</span>
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-tight">
+                        Professionella <br/><span class="text-brand-accent">elinstallationer</span> du kan lita på
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-gray-300 mb-6 font-light">
+                        KraftMontage Sverige AB levererar säkra och moderna elinstallationer för privatpersoner och företag.
+                    </h2>
+                    <p class="text-base md:text-lg text-gray-400 mb-10 max-w-2xl leading-relaxed">
+                        Vi erbjuder högkvalitativa elarbeten med fokus på säkerhet, noggrannhet och kundnöjdhet. Oavsett om det gäller nyinstallation, service eller felsökning kan du känna dig trygg med oss.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#kontakt" class="inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-lg text-brand-dark bg-brand-accent hover:bg-yellow-300 transition-all transform hover:-translate-y-1 shadow-lg shadow-brand-accent/20">
+                            Begär offert
+                        </a>
+                        <a href="#kontakt" class="inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-lg text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-all">
+                            Kontakta oss
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="om-oss" class="py-24 bg-white relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div class="gs-reveal">
+                        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6 tracking-tight">Om KraftMontage</h2>
+                        <div class="w-12 h-1 bg-brand-accent mb-8"></div>
+                        <div class="space-y-6 text-gray-600 text-lg leading-relaxed">
+                            <p>
+                                KraftMontage Sverige AB är ett pålitligt elinstallationsföretag baserat i Västerås. Vi arbetar med allt från mindre serviceuppdrag till större installationer och projekt.
+                            </p>
+                            <p>
+                                Vi sätter alltid kvalitet och säkerhet i första hand och arbetar enligt branschens standarder. Vårt mål är att leverera hållbara lösningar och skapa långsiktiga kundrelationer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 gs-reveal">
+                        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center">
+                            <i data-lucide="shield" class="w-10 h-10 text-brand-accent mb-4"></i>
+                            <span class="font-semibold text-brand-dark">Säkra lösningar</span>
+                        </div>
+                        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center mt-8">
+                            <i data-lucide="check-circle" class="w-10 h-10 text-brand-accent mb-4"></i>
+                            <span class="font-semibold text-brand-dark">Branschstandard</span>
+                        </div>
+                        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center -mt-8">
+                            <i data-lucide="award" class="w-10 h-10 text-brand-accent mb-4"></i>
+                            <span class="font-semibold text-brand-dark">Hög kvalitet</span>
+                        </div>
+                        <div class="bg-brand-light p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center">
+                            <i data-lucide="users" class="w-10 h-10 text-brand-accent mb-4"></i>
+                            <span class="font-semibold text-brand-dark">Långsiktiga relationer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tjanster" class="py-24 bg-brand-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16 gs-reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6 tracking-tight">Våra Tjänster</h2>
+                    <p class="text-lg text-gray-600">
+                        Vi anpassar varje uppdrag efter kundens behov och levererar alltid ett professionellt resultat.
+                    </p>
+                </div>
+                
+                <div id="services-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                </div>
+            </div>
+        </section>
+
+        <section id="varfor-oss" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16 gs-reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Varför välja oss?</h2>
+                    <div class="w-12 h-1 bg-brand-accent mx-auto"></div>
+                </div>
+                
+                <div id="features-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                </div>
+            </div>
+        </section>
+
+        <section id="recensioner" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 gs-reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6 tracking-tight">Vad våra kunder säger</h2>
+                </div>
+                
+                <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                </div>
+            </div>
+        </section>
+
+        <section id="kontakt" class="py-24 bg-brand-light relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-3xl shadow-xl overflow-hidden gs-reveal">
+                    <div class="grid grid-cols-1 lg:grid-cols-2">
+                        
+                        <div class="p-10 lg:p-16 bg-brand-dark text-white flex flex-col justify-between relative overflow-hidden">
+                            <div class="absolute bottom-0 right-0 w-64 h-64 bg-brand-accent/10 rounded-full blur-2xl"></div>
+                            <div class="relative z-10">
+                                <h2 class="text-3xl font-bold mb-4">Kontakta oss</h2>
+                                <p class="text-gray-400 mb-10 text-lg">
+                                    Kontakta oss för offert eller frågor – vi återkommer snabbt.
+                                </p>
+                                
+                                <div class="space-y-8" id="contact-info-container">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-10 lg:p-16">
+                            <form id="contact-form" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Namn</label>
+                                    <input type="text" id="name" name="name" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">E-post</label>
+                                    <input type="email" id="email" name="email" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Meddelande / Offertförfrågan</label>
+                                    <textarea id="message" name="message" rows="4" required
+                                        class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-all bg-gray-50 resize-none"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-brand-dark text-white font-semibold py-4 rounded-lg hover:bg-black transition-colors flex items-center justify-center gap-2">
+                                    Skicka meddelande
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                                <div id="form-success" class="hidden mt-4 p-4 bg-green-50 text-green-700 rounded-lg text-sm text-center">
+                                    Tack! Ditt meddelande har skickats. Vi återkommer snart.
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 rounded-3xl overflow-hidden shadow-lg h-[400px] gs-reveal">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=H%C3%A5kantorpsgatan%20189,%20724%2076%20V%C3%A4ster%C3%A5s&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-black pt-16 pb-8 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-6 h-6 rounded bg-brand-accent flex items-center justify-center">
+                            <i data-lucide="zap" class="w-3 h-3 text-brand-dark"></i>
+                        </div>
+                        <span class="font-bold text-lg text-white">KraftMontage</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Professionella elinstallationer för privatpersoner och företag med fokus på säkerhet och kvalitet.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-6">Snabblänkar</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#hem" class="text-gray-400 hover:text-brand-accent text-sm transition-colors">Hem</a></li>
+                        <li><a href="#om-oss" class="text-gray-400 hover:text-brand-accent text-sm transition-colors">Om oss</a></li>
+                        <li><a href="#tjanster" class="text-gray-400 hover:text-brand-accent text-sm transition-colors">Tjänster</a></li>
+                        <li><a href="#kontakt" class="text-gray-400 hover:text-brand-accent text-sm transition-colors">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-semibold mb-6">Företagsinformation</h3>
+                    <ul class="space-y-3" id="footer-info">
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; <span id="current-year"></span> KraftMontage Sverige AB. Alla rättigheter förbehållna.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
